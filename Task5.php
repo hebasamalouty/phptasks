@@ -65,8 +65,9 @@ if(count($errors) > 0){
 else{
    
    $file = fopen('DisplayBlog.txt',"w") or ('unable to open file');
-   $BlogDisplay = $BlogTitle."||". $Content. "||" .$Image."\n";
+   $BlogDisplay = $BlogTitle."||". $Content. "||" .$finalName."\n";
    fwrite($file , $BlogDisplay);
+   fclose($file);
 }
 
 }
